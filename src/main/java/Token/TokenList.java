@@ -1,4 +1,4 @@
-package com.bracktus.Token;
+package Token;
 
 import java.util.Iterator;
 import java.util.LinkedList;

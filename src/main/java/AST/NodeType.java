@@ -1,4 +1,4 @@
-package com.bracktus.AST;
+package AST;
 
 public enum NodeType {
     BINARY,

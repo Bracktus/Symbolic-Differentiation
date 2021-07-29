@@ -1,4 +1,4 @@
-package com.bracktus.Token;
+package Token;
 
 public enum TokenType {
     NUMBER,

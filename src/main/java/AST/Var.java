@@ -1,11 +1,10 @@
-package com.bracktus.AST;
+package AST;
 
-import com.bracktus.Token.Token;
-import com.bracktus.Token.TokenType;
+import Token.Token;
 
 public class Var extends ASTNode{
 
-    private double value;
+    private Double value;
     private boolean hasValue;
     private NodeType nodeType;
 
@@ -15,19 +14,19 @@ public class Var extends ASTNode{
         this.nodeType = NodeType.VAR;
     }
 
-    public Var(Token token, int value){
+    public Var(Token token, Double value){
         this.token = token;
         this.hasValue = true;
         this.value = value;
         this.nodeType = NodeType.VAR;
     }
 
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.hasValue = true;
         this.value = value;
     }
 
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -46,23 +45,9 @@ public class Var extends ASTNode{
     }
 
     @Override
-    public int countNodes() {
-        return 1;
+    public String toString() {
+        return token.getIdentifier();
     }
 
-    @Override
-    public double evaluate() throws Exception {
-        if (hasValue){
-            return value;
-        }
-        else{
-            throw new Exception(token.getIdentifier() + " has no value. Unable to evaluate expression");
-        }
-    }
-
-    @Override
-    public ASTNode differentiate() {
-        return new Num(new Token(TokenType.NUMBER, "1"));
-    }
 
 }

@@ -1,6 +1,6 @@
-package com.bracktus.TreeOperations;
+package TreeOperations;
 
-import com.bracktus.AST.ASTNode;
+import AST.ASTNode;
 
 public interface Operation {
     <T> T visit(ASTNode astNode) throws Exception;

@@ -1,9 +1,11 @@
-package com.bracktus.TreeOperations;
+package TreeOperations;
 
-import com.bracktus.AST.*;
-import com.bracktus.Token.Token;
+import AST.*;
+import Token.Token;
 
 public class Evaluator implements Operation{
+    //Evaluates an expression in AST form.
+    //If the expression contains any variables (x). Then it will error out, unless the variable has been assigned a value.
 
     @Override
     public Double visit(ASTNode astNode) throws Exception {
